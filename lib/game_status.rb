@@ -61,7 +61,7 @@ def over?(board)
 end
 
 def winner(board)
-  board.all? do |token|
+  board.select? do |token|
     if token == "X" > "O"
       return "X"
     elsif token == "O" < "X"
