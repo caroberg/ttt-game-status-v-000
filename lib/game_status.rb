@@ -74,5 +74,6 @@ def winner(board)
       return "O"
     else
       false
+    end
   end
 end
