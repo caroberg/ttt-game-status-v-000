@@ -61,10 +61,10 @@ def over?(board)
 end
 
 def winner(board)
-  board.select? do |token|
-    if token == "X" > "O"
+  board.select{|tokens| tokens.is_a?(Array)}
+    if tokens == ["X", "X", "X"]
       return "X"
-    elsif token == "O" < "X"
+    elsif tokens == ["O", "O", "O"]
       return "O"
     else
       return nil
