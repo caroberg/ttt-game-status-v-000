@@ -61,12 +61,11 @@ def over?(board)
 end
 
 def winner(board)
-  board.select{|tokens| tokens.is_a?(Array)}
-    if tokens == ["X", "X", "X"]
-      return "X"
-    elsif tokens == ["O", "O", "O"]
-      return "O"
-    else
-      return nil
-    end
+  if won?(board) == ["X", "X", "X"]
+    return "X"
+  elsif won?(board) == ["O", "O", "O"]
+    return "O"
+  else
+    return nil
+  end
 end
